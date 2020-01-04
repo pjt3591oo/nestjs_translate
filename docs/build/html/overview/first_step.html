@@ -89,7 +89,6 @@
 <p class="caption"><span class="caption-text">OVERVIEW</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">First step</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id4">플랫폼</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controllers.html">Controllers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="providers.html">Providers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
@@ -307,9 +306,8 @@ $ nest new project-name
 <p>Nest 어플리케이션 인스턴스를 생성하기 위해, 핵심 클래스 <strong><code class="docutils literal notranslate"><span class="pre">NestFactory</span></code></strong> 를 사용합니다. **<code class="docutils literal notranslate"><span class="pre">NestFactory</span></code>**는 어플리케이션 인스턴스를 생성하기 위해 허용하기 위해 몇가지 정적 메서드를 제공합니다. <strong><code class="docutils literal notranslate"><span class="pre">create()</span></code></strong> 메서드는  <strong><code class="docutils literal notranslate"><span class="pre">INestApplication</span></code></strong> 인터페이스를 수행하는 애플리케이션 객체를 리턴합니다. 이 객체는 다음 장에서 설명하는 일련의 메소드를 제공합니다. 위의 <strong><code class="docutils literal notranslate"><span class="pre">main.ts</span></code></strong> 예제에서 HTTP 리스너를 시작하면 응용 프로그램이 인바운드 HTTP 요청을 기다릴 수 있습니다.</p>
 <p>Nest CLI로 스캐 폴딩 된 프로젝트는 개발자가 각 모듈을 전용 디렉터리에 보관하는 규칙을 따르도록 권장하는 초기 프로젝트 구조를 만듭니다.</p>
 </div>
-</div>
 <div class="section" id="id4">
-<h1>플랫폼<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<h2>플랫폼<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Nest의 목표는 플랫폼의 영향을 받지않는 프레임워크입니다. 플랫폼 독립성을 통해 개발자는 여러 유형의 응용프로그램에서 활용할 수 있는 재사용 가능하도록 합니다. 기술적으로 Nest는 어댑터가 생성되면 모든 Node HTTP 프레임워크와 동작할 수 있습니다. 기본적으로 지원되는 두 가지 HTTP 플랫폼 인 <strong><code class="docutils literal notranslate"><span class="pre">express</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">fastify</span></code></strong> 있습니다. 필요에 가장 적합한 것을 선택할 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">platform</span><span class="o">-</span><span class="n">express</span><span class="p">:</span> <span class="n">express잘</span> <span class="n">알다시피</span> <span class="n">node에서</span> <span class="n">제공하는</span> <span class="n">경량화된</span> <span class="n">웹</span> <span class="n">프레임워크입니다</span><span class="o">.</span> <span class="n">커뮤니티에서</span> <span class="n">구현한</span> <span class="n">많은</span> <span class="n">리소스를</span> <span class="n">갖추고</span> <span class="n">테스트</span> <span class="n">된</span> <span class="n">프로덕션용</span> <span class="n">라이브러리입니다</span><span class="o">.</span> <span class="nd">@nestjs</span><span class="o">/</span><span class="n">platform</span><span class="o">-</span><span class="n">express</span> <span class="n">패키지는</span> <span class="n">기본적으로</span> <span class="n">사용됩니다</span><span class="o">.</span> <span class="n">많은</span> <span class="n">사용자들은</span> <span class="n">익스프레스를</span> <span class="n">잘</span> <span class="n">이용하고</span> <span class="n">있으며</span><span class="p">,</span> <span class="n">그것을</span> <span class="n">가능하게</span> <span class="n">하기</span> <span class="n">위해</span> <span class="n">어떤</span> <span class="n">조치도</span> <span class="n">취할</span> <span class="n">필요가</span> <span class="n">없습니다</span><span class="o">.</span>
 
@@ -320,6 +318,7 @@ $ nest new project-name
 <p>아래 예와 같이 유형을 NestFactory.create() 메소드로 전달하면 앱 개체는 특정 플랫폼에만 사용할 수 있는 메소드를 갖게 됩니다. 그러나 기본 플랫폼 API에 실제로 액세스하려는 경우가 아니라면 유형을 지정할 필요가 없습니다.</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">NestFactory</span><span class="p">.</span><span class="nx">create</span><span class="o">&lt;</span><span class="nx">NestExpressApplication</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">);</span>
 </pre></div>
+</div>
 </div>
 <div class="section" id="id5">
 <h2>어플리케이션 실행<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
